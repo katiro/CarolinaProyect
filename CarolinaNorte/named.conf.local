@@ -9,6 +9,15 @@
 zone "yuca.occ.ues.edu.sv" {
    type master;
    file "/etc/bind/db.yuca";
+   notify yes;
+   also-notify {192.168.0.22; };
+   allow-transfer {192.168.0.22; };
+};
+
+zone "mangos.occ.ues.edu.sv" {
+   type slave; 
+   masters{ 192.168.0.22; };
+   file "/var/cache/bind/db.mangos";
 };
 
 zone "10.in-addr.arpa"{
@@ -16,7 +25,7 @@ zone "10.in-addr.arpa"{
     file "/etc/bind/db.10";
 };
 
-zone "8.b.d.0.1.0.0.2.ip6.arpa"{
+zone "8.d.b.0.1.0.0.2.ip6.arpa"{
     type master;
     file "/etc/bind/db.2001_db8_2";
 };
