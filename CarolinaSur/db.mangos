@@ -3,7 +3,7 @@
 ;
 $TTL	172800
 @	IN	SOA	k2.mangos.occ.ues.edu.sv. fl15001.ues.edu.sv. (
-			      1 	; Serial
+			      2 	; Serial
 			 172800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
