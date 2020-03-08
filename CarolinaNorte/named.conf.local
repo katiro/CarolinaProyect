@@ -30,3 +30,14 @@ zone "8.d.b.0.1.0.0.2.ip6.arpa"{
     file "/etc/bind/db.2001_db8_2";
 };
 
+zone "192.10.in-addr.arpa"{
+    type slave;
+    masters{ 192.168.0.22; };
+    file "/var/cache/bind/db.192.10";
+};
+
+zone "2.0.0.0.8.d.b.0.1.0.0.2.ip6.arpa"{
+     type slave;
+     masters{ 192.168.0.22; };
+     file "/var/cache/bind/db.2001_db8";
+};
